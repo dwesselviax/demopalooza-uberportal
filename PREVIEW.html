@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemoPalooza uberPortal - Preview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: { DEFAULT: '#1E1E1E', alt: '#2A2A2A' },
+            accent: { DEFAULT: '#90E9B8', hover: '#7DD4A3', light: '#D1FAE5' },
+            mint: '#B6FFF6',
+            orange: '#F97316',
+            peach: '#FED7AA',
+            lavender: '#DDD6FE',
+            offwhite: '#F3F4F6',
+            purewhite: '#FFFFFF',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    body { background: linear-gradient(135deg, #E8F5F0 0%, #F0F4F3 50%, #E5EAE8 100%); min-height: 100vh; }
+    .card { background: white; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid rgba(229,231,235,0.5); }
+    .btn { padding: 0.625rem 1.25rem; border-radius: 1rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s; }
+    .btn-primary { background: #90E9B8; color: #1E1E1E; }
+    .btn-primary:hover { background: #7DD4A3; }
+    .badge { padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  </style>
+</head>
+<body class="text-gray-900">
+  <!-- Header -->
+  <header class="bg-[#1E1E1E] text-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-[#90E9B8] rounded-xl flex items-center justify-center">
+          <span class="text-[#1E1E1E] font-bold text-xl">D</span>
+        </div>
+        <span class="font-semibold text-lg">DemoPalooza</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="bg-[#2A2A2A] rounded-xl px-4 py-2 flex items-center gap-2 w-96">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <span class="text-gray-400 text-sm">Search products, orders...</span>
+        </div>
+        <div class="relative">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          <span class="absolute -top-2 -right-2 w-5 h-5 bg-[#90E9B8] text-[#1E1E1E] text-xs font-bold rounded-full flex items-center justify-center">3</span>
+        </div>
+        <div class="w-10 h-10 bg-[#90E9B8] rounded-full flex items-center justify-center">
+          <span class="text-[#1E1E1E] font-semibold text-sm">DU</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex gap-1 py-2">
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl bg-[#90E9B8]/20 text-[#1E1E1E]">Dashboard</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Catalog</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Orders</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Invoices</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Assets</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Services</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Resources</a>
+        <a href="#" class="px-4 py-2 text-sm font-medium rounded-xl text-gray-500 hover:bg-gray-100">Returns</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <!-- Welcome -->
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h1 class="text-2xl font-semibold">Welcome back, Demo</h1>
+        <p class="text-gray-500">Acme Industries</p>
+      </div>
+      <button class="btn btn-primary">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+        </svg>
+        Shop Now
+      </button>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-4 gap-4 mb-8">
+      <div class="card">
+        <p class="text-sm text-gray-500 mb-1">Month-to-Date Spend</p>
+        <p class="text-2xl font-semibold">$15,891</p>
+        <p class="text-sm text-gray-400 mt-1">YTD: $44,341</p>
+      </div>
+      <div class="card">
+        <p class="text-sm text-gray-500 mb-1">Open Orders</p>
+        <p class="text-2xl font-semibold">3</p>
+        <p class="text-sm text-gray-400 mt-1">2 delivered this month</p>
+      </div>
+      <div class="card">
+        <p class="text-sm text-gray-500 mb-1">Invoices Due</p>
+        <p class="text-2xl font-semibold">$14,426</p>
+        <p class="text-sm text-[#F97316] mt-1">$5,766 overdue</p>
+      </div>
+      <div class="card">
+        <p class="text-sm text-gray-500 mb-1">Pending Approvals</p>
+        <p class="text-2xl font-semibold">1</p>
+        <p class="text-sm text-gray-400 mt-1">Requires your action</p>
+      </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-2 gap-6 mb-8">
+      <!-- Action Items -->
+      <div class="card">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-lg font-semibold">Action Required</h2>
+          <span class="badge bg-peach text-[#1E1E1E]">5</span>
+        </div>
+        <div class="space-y-3">
+          <div class="p-4 rounded-2xl border-l-4 border-l-[#F97316] bg-orange-50">
+            <p class="font-medium text-sm">Overdue Invoice</p>
+            <p class="text-xs text-gray-500">INV-2025-00845 is 17 days overdue ($5,766.00)</p>
+          </div>
+          <div class="p-4 rounded-2xl border-l-4 border-l-peach bg-orange-50/50">
+            <p class="font-medium text-sm">Order Pending Approval</p>
+            <p class="text-xs text-gray-500">PO-2026-00163 requires approval ($9,889.00)</p>
+          </div>
+          <div class="p-4 rounded-2xl border-l-4 border-l-lavender bg-purple-50/50">
+            <p class="font-medium text-sm">Maintenance Overdue</p>
+            <p class="text-xs text-gray-500">CNC Machine quarterly maintenance overdue</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="card">
+        <h2 class="text-lg font-semibold mb-4">Recent Activity</h2>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-gray-50">
+            <div class="w-10 h-10 bg-[#90E9B8]/20 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#1E1E1E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-medium">Order Submitted</p>
+              <p class="text-xs text-gray-500">PO-2026-00163 submitted for approval</p>
+            </div>
+            <span class="text-xs text-gray-400">2h ago</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-gray-50">
+            <div class="w-10 h-10 bg-[#90E9B8]/20 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#1E1E1E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-medium">Order Shipped</p>
+              <p class="text-xs text-gray-500">PO-2026-00147 shipped via FedEx</p>
+            </div>
+            <span class="text-xs text-gray-400">3d ago</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-gray-50">
+            <div class="w-10 h-10 bg-[#90E9B8]/20 rounded-xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#1E1E1E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-medium">Payment Received</p>
+              <p class="text-xs text-gray-500">INV-2026-00089 paid via ACH</p>
+            </div>
+            <span class="text-xs text-gray-400">6d ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spend by Category -->
+    <div class="card">
+      <h2 class="text-lg font-semibold mb-4">Spend by Category (MTD)</h2>
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span>Industrial Equipment</span>
+            <span class="text-gray-500">$9,215</span>
+          </div>
+          <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div class="h-full bg-[#90E9B8] rounded-full" style="width: 58%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span>Safety Equipment</span>
+            <span class="text-gray-500">$2,850</span>
+          </div>
+          <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div class="h-full bg-[#90E9B8] rounded-full" style="width: 18%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span>Tools & Hardware</span>
+            <span class="text-gray-500">$1,890</span>
+          </div>
+          <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div class="h-full bg-[#90E9B8] rounded-full" style="width: 12%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-6 text-sm text-gray-400">
+    Powered by viax
+  </footer>
+</body>
+</html>
