@@ -92,7 +92,7 @@ export default function App() {
       <ThemeProvider>
         <AuthProvider>
           <CartProvider>
-            <BrowserRouter>
+            <BrowserRouter basename="/demopalooza-uberportal">
               <AppRoutes />
             </BrowserRouter>
           </CartProvider>
